@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+@Styles.Render("~/Content/Login.css")
+
+<div class="container">
+    <div class="wrapper">
+       
+        <center>
+            <div class="form-group">
+                <img src="@Url.Content("~/Content/imgs/docavatar.png")" style="border-radius:50%; width:10%" />
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" name="login" placeholder="Login.." required autofocus />
+            </div>
+
+
+            <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="Mot de passe.." required="" />
+            </div>
+            <input class="btn btn-md btn-primary" name="Submit" value="Se connecter" type="Submit" /> <br /><br />
+           
+                <label>Vous n'avez pas encore de compte?</label>
+                @Html.ActionLink("Inscrivez-vous", "Register", "User", new { area = "" }, new { @class = "" })
+            
+        </center>
+
+        
+           
+        
+
+    </div>
+</div>
